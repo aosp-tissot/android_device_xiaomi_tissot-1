@@ -617,6 +617,7 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
+    setprop bluetooth.status on
 
 service atfwd /vendor/bin/ATFWD-daemon
     class late_start
